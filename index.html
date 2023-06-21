@@ -27,25 +27,26 @@
     <title>TODO List</title>
   </head>
   <body>
-    <header>
-      <h1>My Todo List</h1>
-    </header>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-do List <img src="./images/icon.png" alt="icon todo list" /></h2>
 
-    <!-- Form  -->
-    <form>
-      <input type="text" class="todo-input" />
-      <button class="todo-btn" type="submit">
-        <i class="fa-solid fa-plus"></i>
-      </button>
-    </form>
-    <!--  -->
+        <!-- Row Input field -->
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your task" />
+          <button onclick="addTask()">
+            <i class="fa-solid fa-2x fa-plus"></i>
+          </button>
+        </div>
 
-    <div class="todo-container">
-      <ul class="todo-list">
-        <div class="todo"></div>
-      </ul>
+        <!-- To-do List items -->
+        <ul id="list-container"></ul>
+        <button onclick="deleteAllTasks()" class="delete-task-btn">
+          Delete all task
+          <i class="fa-sharp fa-solid fa-trash"></i>
+        </button>
+      </div>
     </div>
-
-    <script src="./app.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
